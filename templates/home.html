@@ -1,31 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>My Business Store</title>
-</head>
+{% block title %}goosexing{% endblock %}
 
-<body>
+{% block content %}
 
-    <h1>Welcome to My Store</h1>
-
-    <p>
-        This website helps me manage inventory and lets buyers find my shops.
+<section class="hero-banner">
+    <p class="hero-subtitle">Curated inventory in one place</p>
+    <h1>Shop by Category</h1>
+    <p class="hero-text">
+        Browse available pieces by section, then shop through trusted platforms while the full website grows.
     </p>
+</section>
 
-    <h2>Shop my items:</h2>
+<section class="category-showcase">
+    <div class="category-tile">
+        <a href="/category/men">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Shop Men's">
+            <h3>Shop Men's</h3>
+        </a>
+    </div>
 
-    <a href="https://www.mercari.com/baraka122">
-        Shop on Mercari
-    </a>
+    <div class="category-tile">
+        <a href="/category/women">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Shop Women's">
+            <h3>Shop Women's</h3>
+        </a>
+    </div>
 
-    <br>
+    <div class="category-tile">
+        <a href="/category/unisex">
+            <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=900&q=80" alt="Shop Unisex">
+            <h3>Shop Unisex</h3>
+        </a>
+    </div>
 
-    <a href="https://www.depop.com/goosexing">
-        Shop on Depop
-    </a>
+    <div class="category-tile">
+        <a href="/category/clearance">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=900&q=80" alt="Shop Clearance">
+            <h3>Shop Clearance</h3>
+        </a>
+    </div>
+</section>
 
-</body>
+<section class="market-section">
+    <h2>Prefer trusted platforms?</h2>
+    <div class="market-links">
+        <a href="https://www.mercari.com/u/baraka122/" target="_blank">Mercari Store</a>
+        <a href="https://www.depop.com/goosexing/" target="_blank">Depop Store</a>
+    </div>
+</section>
 
-</html>
+{% endblock %}
