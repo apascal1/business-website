@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}All Items{% endblock %}
+
+{% block content %}
+
+<section>
+    <h1>All Inventory</h1>
+    <p>Browse every item currently listed in the store preview.</p>
+</section>
+
+<section>
+    <div class="product-grid">
+        {% for product in products %}
+        <div class="product-card">
+            <img src="{{ product.image }}" alt="{{ product.name }}">
+
+            <h3>{{ product.name }}</h3>
+
+            <p>{{ product.description }}</p>
+
+            <div class="product-meta">
+                <p>Category: {{ product.category }}</p>
+                <p>Size: {{ product.size }}</p>
+                <p>Condition: {{ product.condition }}</p>
+                <p>Price: ${{ product.price }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}
