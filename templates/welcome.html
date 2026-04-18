@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My Brand</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+   <nav>
+      
+  <img src="{{ url_for('static', filename='images/image.png') }}" class="logo-img">
+  <div class = "brand">
+    <button class = "drop-btn"> ZeroMax ▾</button>
+    <div class ="dropdown-menu"> 
+      <a href = "#"> Vintage Collections</a>
+      <a href = "#"> Athetics</a>
+      <a href = "#"> New Arrivals</a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button class="drop-btn">Shop ▾</button>
+    <div class="dropdown-menu">
+      <a href="#">Hoodies</a>
+      <a href="#">Shirts</a>
+      <a href="#">Long Sleeves</a>
+      <a href="#">Compressions</a>
+      <a href="#">Pants</a>
+      <a href="#">Shorts</a>
+      <a href="#">Other</a>
+    </div>
+  </div>
+
+  <a href="#contact" class="contact-btn">Support</a>
+
+  <div class="search-box">
+    <button class="search-btn">Search</button>
+    <input type="text" placeholder="Type to search...">
+</div>
+</nav>
+      
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
